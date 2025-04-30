@@ -1,0 +1,16 @@
+INFO 2025-04-30 14:50:35,666 logging_middleware 13 140516277422976 Request: GET /institutions/ - User: Anonymous - IP: 172.18.0.1 - Time: 2025-04-30 14:50:35.666286+00:00
+INFO 2025-04-30 14:50:35,764 logging_middleware 13 140516277422976 Response: GET /institutions/ - Status: 200 - Time: 2025-04-30 14:50:35.764336+00:00
+INFO 2025-04-30 14:50:37,310 logging_middleware 14 140516277422976 Request: GET / - User: Anonymous - IP: 172.18.0.1 - Time: 2025-04-30 14:50:37.310075+00:00
+INFO 2025-04-30 14:50:37,374 logging_middleware 14 140516277422976 Response: GET / - Status: 200 - Time: 2025-04-30 14:50:37.374715+00:00
+INFO 2025-04-30 14:50:38,587 logging_middleware 13 140516277422976 Request: GET / - User: Anonymous - IP: 172.18.0.1 - Time: 2025-04-30 14:50:38.587090+00:00
+INFO 2025-04-30 14:50:38,610 logging_middleware 13 140516277422976 Response: GET / - Status: 200 - Time: 2025-04-30 14:50:38.610216+00:00
+INFO 2025-04-30 14:50:39,823 logging_middleware 14 140516277422976 Request: GET /students/ - User: Anonymous - IP: 172.18.0.1 - Time: 2025-04-30 14:50:39.823149+00:00
+INFO 2025-04-30 14:50:39,838 logging_middleware 14 140516277422976 Response: GET /students/ - Status: 200 - Time: 2025-04-30 14:50:39.838035+00:00
+INFO 2025-04-30 14:50:42,575 logging_middleware 13 140516277422976 Request: GET /classes/ - User: Anonymous - IP: 172.18.0.1 - Time: 2025-04-30 14:50:42.575851+00:00
+INFO 2025-04-30 14:50:42,585 logging_middleware 13 140516277422976 Response: GET /classes/ - Status: 500 - Time: 2025-04-30 14:50:42.585827+00:00
+INFO 2025-04-30 14:50:47,849 logging_middleware 14 140516277422976 Request: GET /institutions/ - User: Anonymous - IP: 172.18.0.1 - Time: 2025-04-30 14:50:47.849884+00:00
+INFO 2025-04-30 14:50:47,863 logging_middleware 14 140516277422976 Response: GET /institutions/ - Status: 200 - Time: 2025-04-30 14:50:47.863563+00:00
+INFO 2025-04-30 14:50:50,201 logging_middleware 13 140516277422976 Request: GET /teachers/ - User: Anonymous - IP: 172.18.0.1 - Time: 2025-04-30 14:50:50.201838+00:00
+INFO 2025-04-30 14:50:50,221 logging_middleware 13 140516277422976 Response: GET /teachers/ - Status: 200 - Time: 2025-04-30 14:50:50.221464+00:00
+INFO 2025-04-30 14:50:51,665 logging_middleware 14 140516277422976 Request: GET /students/ - User: Anonymous - IP: 172.18.0.1 - Time: 2025-04-30 14:50:51.665485+00:00
+INFO 2025-04-30 14:50:51,674 logging_middleware 14 140516277422976 Response: GET /students/ - Status: 200 - Time: 2025-04-30 14:50:51.674424+00:00

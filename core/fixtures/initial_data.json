@@ -1,0 +1,73 @@
+[
+    {
+        "model": "core.institution",
+        "pk": 1,
+        "fields": {
+            "name": "Colegio San José",
+            "address": "Av. Principal 123, Ciudad",
+            "phone": "+54 11 1234-5678",
+            "email": "info@colegiosanjose.edu.ar",
+            "website": "",
+            "created_at": "2024-04-30T14:00:00Z",
+            "updated_at": "2024-04-30T14:00:00Z"
+        }
+    },
+    {
+        "model": "core.institution",
+        "pk": 2,
+        "fields": {
+            "name": "Instituto Santa María",
+            "address": "Calle Secundaria 456, Pueblo",
+            "phone": "+54 11 8765-4321",
+            "email": "contacto@institutosantamaria.edu.ar",
+            "website": "",
+            "created_at": "2024-04-30T14:00:00Z",
+            "updated_at": "2024-04-30T14:00:00Z"
+        }
+    },
+    {
+        "model": "core.teacher",
+        "pk": 1,
+        "fields": {
+            "first_name": "Juan",
+            "last_name": "Pérez",
+            "email": "juan.perez@colegiosanjose.edu.ar",
+            "phone": "+54 11 2345-6789",
+            "institution": 1,
+            "hire_date": "2024-01-15",
+            "is_active": true,
+            "created_at": "2024-04-30T14:00:00Z",
+            "updated_at": "2024-04-30T14:00:00Z"
+        }
+    },
+    {
+        "model": "core.teacher",
+        "pk": 2,
+        "fields": {
+            "first_name": "María",
+            "last_name": "González",
+            "email": "maria.gonzalez@colegiosanjose.edu.ar",
+            "phone": "+54 11 3456-7890",
+            "institution": 1,
+            "hire_date": "2024-02-01",
+            "is_active": true,
+            "created_at": "2024-04-30T14:00:00Z",
+            "updated_at": "2024-04-30T14:00:00Z"
+        }
+    },
+    {
+        "model": "core.teacher",
+        "pk": 3,
+        "fields": {
+            "first_name": "Carlos",
+            "last_name": "Rodríguez",
+            "email": "carlos.rodriguez@institutosantamaria.edu.ar",
+            "phone": "+54 11 4567-8901",
+            "institution": 2,
+            "hire_date": "2024-03-10",
+            "is_active": true,
+            "created_at": "2024-04-30T14:00:00Z",
+            "updated_at": "2024-04-30T14:00:00Z"
+        }
+    }
+] 

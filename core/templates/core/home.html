@@ -1,0 +1,26 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Home - School Administration{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Institutions</h5>
+                <p class="card-text">Total institutions: {{ institution_count }}</p>
+                <a href="{% url 'core:institution_list' %}" class="btn btn-primary">View Institutions</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Teachers</h5>
+                <p class="card-text">Total teachers: {{ teacher_count }}</p>
+                <a href="{% url 'core:teacher_list' %}" class="btn btn-primary">View Teachers</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

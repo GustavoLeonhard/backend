@@ -1,0 +1,31 @@
+{% extends 'core/base.html' %}
+
+{% block title %}{{ institution.name }} - School Administration{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>{{ institution.name }}</h1>
+    <div>
+        <a href="{% url 'core:institution_list' %}" class="btn btn-secondary">Back to List</a>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Institution Details</h5>
+        <dl class="row">
+            <dt class="col-sm-3">Name</dt>
+            <dd class="col-sm-9">{{ institution.name }}</dd>
+
+            <dt class="col-sm-3">Address</dt>
+            <dd class="col-sm-9">{{ institution.address }}</dd>
+
+            <dt class="col-sm-3">Phone</dt>
+            <dd class="col-sm-9">{{ institution.phone }}</dd>
+
+            <dt class="col-sm-3">Email</dt>
+            <dd class="col-sm-9">{{ institution.email }}</dd>
+        </dl>
+    </div>
+</div>
+{% endblock %} 
