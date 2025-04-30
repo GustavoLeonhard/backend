@@ -12,7 +12,7 @@ class InstitutionForm(forms.ModelForm):
     """Form for creating and updating institutions."""
     class Meta:
         model = Institution
-        fields = ['name', 'address', 'phone', 'email']
+        fields = ['name', 'address', 'phone', 'email', 'website']
         widgets = {
             'name': forms.TextInput(attrs={'class': 'form-control'}),
             'address': forms.TextInput(attrs={'class': 'form-control'}),
@@ -24,14 +24,15 @@ class TeacherForm(forms.ModelForm):
     """Form for creating and updating teachers."""
     class Meta:
         model = Teacher
-        fields = ['first_name', 'last_name', 'email', 'phone', 'institution', 'hire_date']
+        fields = ['first_name', 'last_name', 'email', 'phone', 'hire_date', 'is_active', 'institution']
         widgets = {
             'first_name': forms.TextInput(attrs={'class': 'form-control'}),
             'last_name': forms.TextInput(attrs={'class': 'form-control'}),
             'email': forms.EmailInput(attrs={'class': 'form-control'}),
             'phone': forms.TextInput(attrs={'class': 'form-control'}),
-            'institution': forms.Select(attrs={'class': 'form-control'}),
             'hire_date': forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}),
+            'is_active': forms.CheckboxInput(attrs={'class': 'form-control'}),
+            'institution': forms.Select(attrs={'class': 'form-control'}),
         }
 
 class StudentForm(forms.ModelForm):

@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-4 mb-4">
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Institutions</h5>
@@ -13,12 +13,57 @@
             </div>
         </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-4 mb-4">
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Teachers</h5>
                 <p class="card-text">Total teachers: {{ teacher_count }}</p>
                 <a href="{% url 'core:teacher_list' %}" class="btn btn-primary">View Teachers</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Students</h5>
+                <p class="card-text">Total students: {{ student_count }}</p>
+                <a href="{% url 'core:student_list' %}" class="btn btn-primary">View Students</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Classes</h5>
+                <p class="card-text">Total classes: {{ class_count }}</p>
+                <a href="{% url 'core:class_list' %}" class="btn btn-primary">View Classes</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Subjects</h5>
+                <p class="card-text">Total subjects: {{ subject_count }}</p>
+                <a href="{% url 'core:subject_list' %}" class="btn btn-primary">View Subjects</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Enrollments</h5>
+                <p class="card-text">Total enrollments: {{ enrollment_count }}</p>
+                <a href="{% url 'core:enrollment_list' %}" class="btn btn-primary">View Enrollments</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Schedules</h5>
+                <p class="card-text">Total schedules: {{ schedule_count }}</p>
+                <a href="{% url 'core:schedule_list' %}" class="btn btn-primary">View Schedules</a>
             </div>
         </div>
     </div>

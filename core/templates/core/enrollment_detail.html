@@ -1,0 +1,51 @@
+{% extends "core/base.html" %}
+
+{% block title %}Enrollment Details{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h1 class="mb-0">Enrollment Details</h1>
+            <div class="btn-group" role="group">
+                <a href="{% url 'core:enrollment_update' enrollment.pk %}" class="btn btn-warning">
+                    <i class="fas fa-edit"></i> Edit
+                </a>
+                <a href="{% url 'core:enrollment_delete' enrollment.pk %}" class="btn btn-danger">
+                    <i class="fas fa-trash"></i> Delete
+                </a>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Student Information</h3>
+                    <p><strong>Name:</strong> {{ enrollment.student.get_full_name }}</p>
+                    <p><strong>Email:</strong> {{ enrollment.student.email }}</p>
+                    <p><strong>Phone:</strong> {{ enrollment.student.phone }}</p>
+                </div>
+                <div class="col-md-6">
+                    <h3>Class Information</h3>
+                    <p><strong>Class:</strong> {{ enrollment.class.name }}</p>
+                    <p><strong>Teacher:</strong> {{ enrollment.class.teacher }}</p>
+                    <p><strong>Subject:</strong> {{ enrollment.class.subject }}</p>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <h3>Enrollment Details</h3>
+                    <p><strong>Enrollment Date:</strong> {{ enrollment.enrollment_date }}</p>
+                    <p><strong>Status:</strong> {{ enrollment.get_status_display }}</p>
+                    <p><strong>Notes:</strong> {{ enrollment.notes|default:"No notes available" }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <a href="{% url 'core:enrollment_list' %}" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Back to Enrollments
+        </a>
+    </div>
+</div>
+{% endblock %} 

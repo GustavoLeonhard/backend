@@ -1,0 +1,29 @@
+{% extends "core/base.html" %}
+
+{% block title %}Delete Subject{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header">
+            <h1 class="mb-0">Delete Subject</h1>
+        </div>
+        <div class="card-body">
+            <p class="lead">Are you sure you want to delete the subject "{{ subject.name }}"?</p>
+            <p class="text-danger">This action cannot be undone.</p>
+            
+            <form method="post">
+                {% csrf_token %}
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-danger">
+                        <i class="fas fa-trash"></i> Delete
+                    </button>
+                    <a href="{% url 'core:subject_detail' subject.pk %}" class="btn btn-secondary">
+                        <i class="fas fa-times"></i> Cancel
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %} 

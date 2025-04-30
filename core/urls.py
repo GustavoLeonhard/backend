@@ -2,13 +2,11 @@
 Main URL configuration for the school administration system.
 """
 from django.urls import path, include
-from .views import home
+from .views import HomeView
 
 app_name = 'core'
 
 urlpatterns = [
-    path('', home, name='home'),
-    path('institutions/', include('core.urls.institution')),
-    path('teachers/', include('core.urls.teacher')),
-    # Agregar más rutas aquí según sea necesario
+    path('', HomeView.as_view(), name='home'),
+    path('', include('core.urls.urls')),
 ] 

@@ -1,0 +1,19 @@
+{% extends 'core/base_form.html' %}
+
+{% block form_title %}
+    {% if object %}
+        Editar Clase
+    {% else %}
+        Crear Nueva Clase
+    {% endif %}
+{% endblock %}
+
+{% block cancel_url %}{% url 'core:class_list' %}{% endblock %}
+
+{% block submit_text %}
+    {% if object %}
+        Actualizar
+    {% else %}
+        Crear
+    {% endif %}
+{% endblock %} 

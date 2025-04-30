@@ -5,10 +5,12 @@ from ..views.teacher import (
     TeacherDeleteView
 )
 
+app_name = 'teachers'
+
 urlpatterns = [
-    path('', TeacherListView.as_view(), name='teacher_list'),
-    path('<int:pk>/', TeacherDetailView.as_view(), name='teacher_detail'),
-    path('create/', TeacherCreateView.as_view(), name='teacher_create'),
-    path('<int:pk>/update/', TeacherUpdateView.as_view(), name='teacher_update'),
-    path('<int:pk>/delete/', TeacherDeleteView.as_view(), name='teacher_delete'),
+    path('', TeacherListView.as_view(), name='list'),
+    path('<int:pk>/', TeacherDetailView.as_view(), name='detail'),
+    path('create/', TeacherCreateView.as_view(), name='create'),
+    path('<int:pk>/update/', TeacherUpdateView.as_view(), name='update'),
+    path('<int:pk>/delete/', TeacherDeleteView.as_view(), name='delete'),
 ] 

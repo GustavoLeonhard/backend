@@ -34,6 +34,9 @@ def home(request):
         'teacher_count': Teacher.objects.count(),
         'student_count': Student.objects.count(),
         'class_count': Class.objects.count(),
+        'subject_count': Subject.objects.count(),
+        'enrollment_count': Enrollment.objects.count(),
+        'schedule_count': Schedule.objects.count(),
     }
     return render(request, 'core/home.html', context)
 

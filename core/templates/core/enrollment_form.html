@@ -1,0 +1,19 @@
+{% extends 'core/base_form.html' %}
+
+{% block form_title %}
+    {% if object %}
+        Editar Inscripción
+    {% else %}
+        Crear Nueva Inscripción
+    {% endif %}
+{% endblock %}
+
+{% block cancel_url %}{% url 'core:enrollment_list' %}{% endblock %}
+
+{% block submit_text %}
+    {% if object %}
+        Actualizar
+    {% else %}
+        Crear
+    {% endif %}
+{% endblock %} 
