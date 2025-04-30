@@ -1,37 +1,3 @@
-# 🧪 Technical Challenge – Django Project (1 Hour)
-
-## Overview
-
-As part of this technical evaluation, your task is to **create a Django project from scratch**, using **Docker** to manage and run the services.
-
-The project theme is: **Administration of educational institutions**.
-
-We recommend you start by implementing at least the following core models:
-
-- `Institution` (or `School`) – the main organizational unit
-- `Teacher` – representing staff or faculty
-
-After that, you're expected to **continue shaping the system** by designing and adding other models and features you think are necessary for a basic school management system.  
-This may include entities like `Student`, `Class`, `Subject`, `Schedule`, or any other component you believe is relevant.
-
-Part of the challenge is to decide **what's important to include** in an MVP for managing an educational institution.
-
-## Requirements
-
-- ✅ Project created using **Django**
-- ✅ Setup and run using **Docker** (Dockerfile + docker-compose)
-- ✅ Define and implement models and relationships based on the described theme
-- ✅ Include at least some minimal **tests** (unit or integration)
-- ✅ Code should follow good practices and clear structure
-
-## Time Limit
-
-⏱️ **You have 1 hour** to complete this challenge.
-
-We're not expecting a full-featured application, but we do want to see how you **approach a problem**, structure your code, and make design decisions under time pressure.
-
-## Good luck!
-
 # School Administration System
 
 A Django-based system for managing educational institutions, including teachers, students, classes, and schedules.
@@ -198,10 +164,26 @@ backend/
 │   │   ├── academic.py    # Class, Subject, and Schedule models
 │   │   ├── enrollment.py  # Enrollment model
 │   │   └── __init__.py   # Model imports
+│   ├── urls/              # URL configurations
+│   │   ├── institution.py # Institution URLs
+│   │   ├── teacher.py     # Teacher URLs
+│   │   ├── student.py     # Student URLs
+│   │   ├── academic.py    # Academic URLs
+│   │   ├── enrollment.py  # Enrollment URLs
+│   │   └── __init__.py   # URL imports
+│   ├── views/             # View controllers
+│   │   ├── institution.py # Institution views
+│   │   ├── teacher.py     # Teacher views
+│   │   ├── student.py     # Student views
+│   │   ├── academic.py    # Academic views
+│   │   ├── enrollment.py  # Enrollment views
+│   │   └── __init__.py   # View imports
 │   ├── templates/         # HTML templates
 │   ├── fixtures/          # Initial data
 │   ├── tests/            # Test files
-│   └── views.py          # View controllers
+│   ├── forms.py          # Form definitions
+│   ├── urls.py           # Main URL configuration
+│   └── views.py          # Main view (home)
 ├── school_admin/         # Project configuration
 ├── manage.py            # Django management script
 ├── requirements.txt     # Python dependencies
@@ -219,15 +201,3 @@ The system includes the following main models:
 - Subject
 - Enrollment
 - Schedule
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.

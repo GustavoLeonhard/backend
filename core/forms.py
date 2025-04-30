@@ -1,7 +1,15 @@
+"""
+Forms for the school administration system.
+
+This module contains all the ModelForms used for creating and updating
+institutions, teachers, students, classes, subjects, enrollments, and schedules.
+"""
+
 from django import forms
 from .models import Institution, Teacher, Student, Class, Subject, Enrollment, Schedule
 
 class InstitutionForm(forms.ModelForm):
+    """Form for creating and updating institutions."""
     class Meta:
         model = Institution
         fields = ['name', 'address', 'phone', 'email']
@@ -13,6 +21,7 @@ class InstitutionForm(forms.ModelForm):
         }
 
 class TeacherForm(forms.ModelForm):
+    """Form for creating and updating teachers."""
     class Meta:
         model = Teacher
         fields = ['first_name', 'last_name', 'email', 'phone', 'institution', 'hire_date']

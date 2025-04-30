@@ -1,3 +1,10 @@
+"""
+Views for the school administration system.
+
+This module contains all the views for managing institutions, teachers, students,
+classes, subjects, enrollments, and schedules in the school administration system.
+"""
+
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
@@ -11,6 +18,17 @@ from .forms import (
 # Create your views here.
 
 def home(request):
+    """
+    View for the home page.
+    
+    Displays a dashboard with counts of institutions, teachers, students, and classes.
+    
+    Args:
+        request: The HTTP request object
+        
+    Returns:
+        HttpResponse: Rendered home page template with context data
+    """
     context = {
         'institution_count': Institution.objects.count(),
         'teacher_count': Teacher.objects.count(),
@@ -21,28 +39,33 @@ def home(request):
 
 # Institution Views
 class InstitutionListView(ListView):
+    """View for listing all institutions."""
     model = Institution
     template_name = 'core/institution_list.html'
     context_object_name = 'institutions'
 
 class InstitutionDetailView(DetailView):
+    """View for displaying details of a specific institution."""
     model = Institution
     template_name = 'core/institution_detail.html'
     context_object_name = 'institution'
 
 class InstitutionCreateView(CreateView):
+    """View for creating a new institution."""
     model = Institution
     form_class = InstitutionForm
     template_name = 'core/institution_form.html'
     success_url = reverse_lazy('core:institution_list')
 
 class InstitutionUpdateView(UpdateView):
+    """View for updating an existing institution."""
     model = Institution
     form_class = InstitutionForm
     template_name = 'core/institution_form.html'
     success_url = reverse_lazy('core:institution_list')
 
 class InstitutionDeleteView(DeleteView):
+    """View for deleting an institution."""
     model = Institution
     template_name = 'core/institution_confirm_delete.html'
     success_url = reverse_lazy('core:institution_list')
