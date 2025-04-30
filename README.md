@@ -30,7 +30,18 @@ cd backend
 
 The project uses Docker for development and deployment. No local Python installation is required.
 
-### 3. Build and Run the Application
+### 3. Code Organization
+
+The project follows a modular structure where related functionality is grouped together:
+
+- **Models**: Each model is in its own file under `core/models/`
+- **URLs**: URL patterns are split by functionality in `core/urls/`
+- **Views**: Views are organized by functionality in `core/views/`
+- **Forms**: All forms are defined in `core/forms.py`
+
+This modular structure makes the code easier to maintain and scale. For more details, see the [Code Organization](#code-organization) section.
+
+### 4. Build and Run the Application
 
 ```bash
 # Build and start the containers
@@ -40,19 +51,19 @@ docker-compose up -d
 # http://localhost:8000
 ```
 
-### 4. Database Setup
+### 5. Database Setup
 
-The first time you run the application, the database will be automatically created and migrations will be applied. However, if you need to manually set up the database:
+The first time you run the application, the database will be automatically created and migrations will be applied. The initial data will also be loaded automatically. If you need to manually set up the database:
 
 ```bash
 # Apply migrations
 docker-compose exec web python manage.py migrate
 
 # Load initial data (optional)
-docker-compose exec web python manage.py loaddata initial_data.json
+docker-compose exec web python manage.py loaddata core/fixtures/initial_data.json
 ```
 
-### 5. Accessing the Application
+### 6. Accessing the Application
 
 - Web Interface: http://localhost:8000
 - Admin Interface: http://localhost:8000/admin
@@ -71,7 +82,7 @@ Follow the prompts to set up your admin credentials:
 
 Once created, you can log in to the admin interface using these credentials.
 
-### 6. Development Commands
+### 7. Development Commands
 
 ```bash
 # View logs
@@ -83,14 +94,11 @@ docker-compose exec web python manage.py makemigrations
 # Apply migrations
 docker-compose exec web python manage.py migrate
 
-# Create a superuser
-docker-compose exec web python manage.py createsuperuser
-
 # Stop the application
 docker-compose down
 ```
 
-### 7. Database Reset and Migration
+### 8. Database Reset and Migration
 
 If you need to reset the database or make significant changes to the models, follow these steps:
 
@@ -106,12 +114,12 @@ docker-compose exec web python manage.py makemigrations core
 docker-compose exec web python manage.py migrate
 
 # Load initial data (if needed)
-docker-compose exec web python manage.py loaddata initial_data.json
+docker-compose exec web python manage.py loaddata core/fixtures/initial_data.json
 ```
 
 Note: The `-v` flag in `docker-compose down -v` will remove all volumes, including the database. Use with caution in production environments.
 
-### 8. Logging System
+### 9. Logging System
 
 The application includes a comprehensive logging system that tracks:
 
